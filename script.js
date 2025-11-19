@@ -7,7 +7,7 @@ function mincost(arr)
 		arr.sort((a,b) => a-b);
 		let join = arr[0]+arr[1];
 		minCost += join;
-		arr.shift();
+		arr.splice(0,2);
 		arr.unshift(join);
 	}
 	return minCost;
